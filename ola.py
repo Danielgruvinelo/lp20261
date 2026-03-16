@@ -179,4 +179,4 @@ def q18():
 # necessário também ler o valor da cotação do dólar.
 
 questao = int(input("Digite a questão a ser executada: "))
-eval(f"q{questao}()") 
+eval(f"q{int(questao):02d}()") 
