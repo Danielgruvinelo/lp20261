@@ -15,7 +15,7 @@ def q02():
 def q03():
     print((5+8+12)/3)
        
-q03
+
 #4. Faça um programa que leia e imprima um número inteiro.
 
 def q04():
@@ -132,6 +132,18 @@ def q15():
 #    funcionário. Para isso, o programa deverá ler o salário atual
 #    do funcionário e ler o percentual de reajuste. Ao final imprimir
 #    o valor do novo salário.
+def q16():
+    salario = float(input("Digite o salário do funcionário: "))
+    reajuste = float(input("Digite o porcentual de reajuste: "))
+    valor_do_reajuste = round(salario * reajuste/100, 2)
+    valor_final = salario + valor_do_reajuste
+    resultado = f'''
+    Valor do salário = R$ {salario:.2f}
+    Valor do reajuste = {reajuste:.2f} %
+    Valor do salario com reajuste = R$ {valor_do_reajuste:.2f}
+    Valor final do salario = {valor_final:.2f}
+    '''
+    print(resultado)
 
 #17. Faça um programa que calcule a conversão entre graus centígrados
 #    e Fahrenheit. Para isso, leia o valor em centígrados e calcule
@@ -161,9 +173,9 @@ def q18():
     T = float(input("Digite de viagem (em horas): "))
     V = float(input("Digite a velocidade em média (em km/hora): "))
     D = T * V
-    L = distancia / 12
-    print(f'distância percorrida: {distancia:.2f} km')
-    print(f'litros de combustível consumido: {litros:.2f} litros')
+    L = D / 12
+    print(f'distância percorrida: {D:.2f} km')
+    print(f'litros de combustível consumidos: {L:.2f} litros')
 
 
 
