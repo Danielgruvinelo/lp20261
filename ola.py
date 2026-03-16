@@ -12,12 +12,10 @@ def q02():
     print(30*27)
 
 #3. Faça um programa que imprima a média aritmética entre os números 5, 8, 12.
-
 def q03():
-    imprimir((5+8+12)/3)
-    
-    
-
+    print((5+8+12)/3)
+       
+q03
 #4. Faça um programa que leia e imprima um número inteiro.
 
 def q04():
@@ -180,5 +178,5 @@ def q18():
 # em real (R$) de um valor lido em dólar (US$). Para isso, será
 # necessário também ler o valor da cotação do dólar.
 
-questao = int(input('Digite a questão a ser executada: '))
-eval(f'q{questao}()') 
+questao = int(input("Digite a questão a ser executada: "))
+eval(f"q{questao}()") 
