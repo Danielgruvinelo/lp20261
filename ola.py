@@ -14,8 +14,8 @@ def q02():
 #3. Faça um programa que imprima a média aritmética entre os números 5, 8, 12.
 
 def q03():
-    media = (5+8+12)/3
-    print(f'(5+8+12)/3 = {media}')
+    imprimir((5+8+12)/3)
+    
     
 
 #4. Faça um programa que leia e imprima um número inteiro.
@@ -23,7 +23,7 @@ def q03():
 def q04():
     numero = int(input("digite um número inteiro:"))
     print(numero)
-q04
+
 #5. Faça um programa que leia dois números reais e os imprima.
 def q05():
     num1 = float(input("digite o primeiro numero real: "))
@@ -180,5 +180,5 @@ def q18():
 # em real (R$) de um valor lido em dólar (US$). Para isso, será
 # necessário também ler o valor da cotação do dólar.
 
-questao = input('Digite a questão a ser executada: ')
-eval(f'q{questao}()') # eval transforma uma string (texto) em comando python
+questao = int(input('Digite a questão a ser executada: '))
+eval(f'q{questao}()') 
