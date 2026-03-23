@@ -207,25 +207,30 @@ def q13():
 def q15():
     menos_de_21 = 0
     mais_de_50 = 0
-    while true:
+
+    while True:
         try:
-            idade = int(input('Digite a idade(ou 0 para sair): '))
+            idade = int(input('Digite a idade (ou 0 para sair): '))
+
             if idade == 0:
                 break
-                if idade < 21:
-                    menos_de_21 += 1
-                if idade > 50:
-                    mais_de_50 += 1
+
+            if idade < 21:
+                menos_de_21 += 1
+
+            if idade > 50:
+                mais_de_50 += 1
+
         except ValueError:
             print('Entrada inválida! Por favor, digite um número válido.')
-    print('\nResultados: ')
-    print(f' Total de pessoas com menos de 21 anos: {menos_de_21}')
-    print(f' Total de pessoas com mais de 50 anos: {mais_de_50}')
+
+    print('\nResultados:')
+    print(f'Total de pessoas com menos de 21 anos: {menos_de_21}')
+    print(f'Total de pessoas com mais de 50 anos: {mais_de_50}')
+
+
 if __name__ == "__main__":
-def main()
-q15()
-
-
+    q15()
 
 
 #16. Sabendo-se que a unidade lógica e aritmética calcula a divisão por meio de subtrações
