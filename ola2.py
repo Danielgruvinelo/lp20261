@@ -92,7 +92,7 @@ def q6():
         print(f'Crédito não autorizado. Prestação máxima: R$ {prestacao_maxima}')
     else:
         print(f'Crédito concedido!')
-q6()
+
 
 #7. Faça um programa que leia um número e indique se o número está compreendido
 #   entre 20 e 50 ou não.
