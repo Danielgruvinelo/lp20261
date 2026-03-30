@@ -28,7 +28,7 @@ def exemploEnquanto():# Quando não se sabe quantas iterações serão necessár
 def q1():
     for c in range(1,101):
         print(c, end=" " )
-q1()
+
 #2. Faça um programa que imprima todos os números pares de 100 até 1.
 def q2():
     for x in range(100,0,-2):
@@ -41,12 +41,19 @@ def q3():
 #pessoas.O programa deve imprimir o nome da pessoa se ela for do sexo masculino
 #e tiver mais de 21 anos e se for feminino .
 def q4():
-    for x in range(3):
-        nome = input('Nome: ')
-        sexo = input('Sexo: ').upper()[0]
-        idade = int(input('Idade: '))
+    for x in range(1,3):
+        print(f'\nPessoa {x}')
+
+        nome=input('Digite seu nome: ')
+        idade=int(input('Digite sua idade: '))
+        sexo = input('Digite seu sexo(M/F): ').strip().upper()
+
         if sexo == 'M' and idade >= 21:
-            print(f'{nome} é do sexo masculino e maior de 21.' )
+            print(f'Homem com mais de 21 anos: {nome}')
+
+        elif sexo == 'F' :
+            print(f'Mulher: {nome}')
+
 #5. Sabendo-se que a unidade lógica e aritmética calcula o produto através de somas
 #sucessivas, crie um programa que calcule o produto de dois números inteiros
 #lidos. Suponha que os números lidos sejam positivos.
@@ -64,16 +71,14 @@ def q5():
 #• 1 + 2 = 3, quarto termo, etc.
 # 1 1 2 3 5 8 13 21
 def q6():
-    ant = 1
-    atu = 1
-    print(ant, end=' ' )
-    print(atu, end=' ' )
-    for _ in range(18):
-        pro = ant + atu        
-        print(pro, end=' ')
-        ant = atu
-        atu = pro
-
+    anterior: int = 0
+>>> atual: int = 1
+>>> for _ in range(20):
+...     print(atual, end=' ')
+...     proximo = atual + anterior
+...     anterior = atual
+...     atual = proximo
+    
 #7. Crie um programa que permita entrar com o nome, a nota da
 #prova 1 e da prova 2 de 15 alunos. Ao final, imprimir uma listagem, contendo:
 #nome, nota da prova 1, nota da prova 2, e média das notas de cada aluno. Ao final,
