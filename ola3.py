@@ -1,4 +1,3 @@
-
 '''
 Lista de Exercícios referentes a estruturas de iteração (repetição)
 '''
@@ -72,12 +71,12 @@ def q5():
 # 1 1 2 3 5 8 13 21
 def q6():
     anterior: int = 0
->>> atual: int = 1
->>> for _ in range(20):
-...     print(atual, end=' ')
-...     proximo = atual + anterior
-...     anterior = atual
-...     atual = proximo
+    atual: int = 1
+    for _ in range(20):
+        print(atual, end=' ')
+        proximo = atual + anterior
+        anterior = atual
+        atual = proximo
     
 #7. Crie um programa que permita entrar com o nome, a nota da
 #prova 1 e da prova 2 de 15 alunos. Ao final, imprimir uma listagem, contendo:
@@ -140,30 +139,31 @@ def q8():
 #11. Construa um programa que leia vários números e informe quantos números
 #entre 100 e 200 foram digitados. Quando o valor 0 (zero) for lido, o algoritmo
 #deverá cessar sua execução.
-def q11():
-    num = -1
-    contador = 0
-    while num != 0:
-        num = int(input(' Digite um número: '))
-        if num >= 100 and num <= 200:
-            contador += 1
-    print(f' Quantidade de valores entre 100 e 200: {contador}')
+def q11() -> None:
+    numero = 1
+    cont_100_200 = 0
+    qtade_numeros = 0
+    while numero != 0:
+        numero = random.randrange(0,200)
+        cont_100_200 += 1 if 100<=numero<=200 else 0
+        qtdade_numeros += 1
+    print('De {qtade_numeros} gerados, {cont_100_200} estão no intervalo entre 100 e 200!' )
 
 #12. Dado um país A, com 5 milhões de habitantes e uma taxa de natalidade de 3% ao
 #ano, e um país B com 7 milhões de habitantes e uma taxa de natalidade de 2% ao
 #ano, fazer um programa que calcule e imprima o tempo necessário para que a
 #população do país A ultrapasse a população do país B.
-def q12():
-    populacaoA = 5_000_000
-    populacaoB = 7_000_000
-    anos = 0
+def q12() -> None:
+    populacaoA: int = 5_000_000
+    populacaoB: int = 7_000_000
+    anos: int = 0
     while populacaoA  <  populacaoB:   
         anos+= 1
-        populacaoA += populacaoA*0.03
-        populacaoB += populacaoB*0.02
-    print(f' Após {anos} anos: ')
-    print(f' Populacao A = {populacaoA}')
-    print(f' Populacao B = {populacaoB}')
+        populacaoA = populacaoA*1.03
+        populacaoB = populacaoB*1.02
+    print(f' Após {ano} anos, a população do país A superou a de B' )
+    print(f' Populacao do país A = {int(paísA)}')
+    print(f' Populacao do país B = {int(paísB)}')
 
 #13. Uma empresa de fornecimento de energia elétrica faz a leitura mensal dos medidores
 #de consumo. Para cada consumidor, são digitados os seguintes dados:
@@ -234,8 +234,8 @@ def q15():
     print(f'Total de pessoas com mais de 50 anos: {mais_de_50}')
 
 
-if __name__ == "__main__":
-    q15()
+
+    
 
 
 #16. Sabendo-se que a unidade lógica e aritmética calcula a divisão por meio de subtrações
