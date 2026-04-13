@@ -1,27 +1,27 @@
 '''
 Lista de Exercícios referentes a estruturas de iteração (repetição)
 '''
+from util import inputint, inputfloat, gerar_palavra
+import random
+from typing import Final
 
-# util.py
-def inputint(msg):
-    return int(input(msg))
+VERMELHO: Final = '\033[31m'
+VERDE: Final = '\033[32m'
+RESET: Final = '\033[m'
 
-def inputfloat(msg):
-    return float(input(msg))
-
-
-def exemploPara():
-    for c in range(10):# vai de 0 a 9
+def exemploPara(): # Quando se sabe a qtde de repetições
+    for c in range(10): #0-9 Baseado em intervalo (inicio e fim)
         print(c)
-    for c in range(1,10): # vai de 1 - 9
+    for c in range(1,10): #1-9
         print(c)
-    for c in range(1,10,2): # vai de 1,3,5,7,9
-        print(C)
-        
-def exemploEnquanto():# Quando não se sabe quantas iterações serão necessária
+    for c in range(1,10,2): #1,3,5,7,9
+        print(c)
+
+def exemploEnquanto(): # Quando não se sabe quantas iterações serão necessárias
     opcao=-1
     while opcao != 0: #baseado em uma condição (True|False)
         opcao = inputint('Opção: ')
+
     
 #1.Faça um programa que imprima todos os números de 1 até 100.
 def q1():
@@ -409,7 +409,8 @@ def q15():
 #analisadas.
 #Obs.: Para encerrar a entrada de dados, digite um número menor que zero para a
 #idade.
-
-questao = int(input('Questão a executar: '))
-eval(f'q{questao}()')
+definição q30()-> Nenhum:
+    elevação Erro de não implementado('q30() ainda não foi codificado')
+questao = inteiro(entrada('Questão a executar: '))
+avaliação(f'q{questao}()')
 
