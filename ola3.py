@@ -1,32 +1,32 @@
 '''
 Lista de Exercícios referentes a estruturas de iteração (repetição)
 '''
-from util import inputint, inputfloat, gerar_palavra
-import random
-from typing import Final
+de utilitário importar inputint, inputfloat, gerar_palavra
+importar relatório
+de digitando importar Final
+importar matplotlib.pyplot como planta
 
 VERMELHO: Final = '\033[31m'
 VERDE: Final = '\033[32m'
 RESET: Final = '\033[m'
 
-def exemploPara(): # Quando se sabe a qtde de repetições
-    for c in range(10): #0-9 Baseado em intervalo (inicio e fim)
-        print(c)
-    for c in range(1,10): #1-9
-        print(c)
-    for c in range(1,10,2): #1,3,5,7,9
-        print(c)
+definição Para .(): # Quando se sabe a qtde de repetições
+    para c em faixa(10): #0-9 Baseado em intervalo (inicio e fim)
+        imprimir(c)
+    para c em faixa(1,10): #1-9
+        imprimir(c)
+    para c em faixa(1,10,2): #1,3,5,7,9
+        imprimir(c)
 
-def exemploEnquanto(): # Quando não se sabe quantas iterações serão necessárias
+definição Enquanto(): # Quando não se sabe quantas iterações serão necessárias
     opcao=-1
-    while opcao != 0: #baseado em uma condição (True|False)
+    enquanto opcao != 0: #baseado em uma condição (True|False)
         opcao = inputint('Opção: ')
 
     
 #1.Faça um programa que imprima todos os números de 1 até 100.
 def q1():
-    for c in range(1,101):
-        print(c, end=" " )
+    C
 
 #2. Faça um programa que imprima todos os números pares de 100 até 1.
 def q2():
@@ -164,6 +164,25 @@ def q12() -> None:
     print(f' Após {ano} anos, a população do país A superou a de B' )
     print(f' Populacao do país A = {int(paísA)}')
     print(f' Populacao do país B = {int(paísB)}')
+
+#12.1 Faça uma simulação de investimento para que se descubra quantos anos serão necessários
+#para que se alcance a marca de um milhão de reais a partir de um saldo inicial,
+#um aporte mensal regular a uma taxa de retorno mensal constante
+definição q121()-> Nenhum:
+     x = []
+     y = []        
+     meta:inteiro = inputint('Meta de investimento: R$' ,min=1000)
+     saldo:flutuador = entrada float('Saldo inicial: R$' ,min=0)  
+     aporte:flutuador = entrada float('Contribuição mensal: R$' ,min=0') 
+     táxons:flutuador = entrada float('Taxa de retorno mensal (%): 'min=0,1')
+     mes:inteiro = 0
+     enquanto saldo < meta:
+        mes +=1
+        saldo = saldo + aporte + saldo*táxons/100
+        x.acrescentar(mes)
+        y.acrescentar(saldo) 
+    imprimir(f'Tempo de investimento:{inteiro(mes/12)}anos e {mes%12}meses.')
+
 
 #13. Uma empresa de fornecimento de energia elétrica faz a leitura mensal dos medidores
 #de consumo. Para cada consumidor, são digitados os seguintes dados:
